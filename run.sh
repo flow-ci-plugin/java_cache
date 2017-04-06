@@ -55,7 +55,7 @@ mvn_cache(){
 }
 
 if [[ $FLOW_ENABLE_CACHE == 'TRUE' ]]; then
-  cache_gradle
+  # cache_gradle
   mvn_cache
 else
   echo 'cache disabled'
