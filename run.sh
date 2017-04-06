@@ -17,7 +17,7 @@ cache_gradle(){
   FLOW_USER_GRADLE_CACHE="$HOME/.gradle"
   
   if [[ -d $FLOW_GRADLE_CACHE_PATH ]]; then
-    # echo "gradle cache exists"
+     echo "gradle cache exists"
   else
     # echo "cache not exists"
     mkdir -p $FLOW_GRADLE_CACHE_PATH
@@ -55,7 +55,7 @@ mvn_cache(){
 }
 
 if [[ $FLOW_ENABLE_CACHE == 'TRUE' ]]; then
-  # cache_gradle
+  cache_gradle
   mvn_cache
 else
   echo 'cache disabled'
