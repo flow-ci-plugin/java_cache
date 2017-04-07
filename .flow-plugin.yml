@@ -11,8 +11,9 @@ inputs:
   - name: FLOW_ENABLE_CACHE
     editable: true
     options:
-      - TRUE
-      - FALSE
+      - true=TRUE
+      - false=FALSE
+    default: 'TRUE'
   - name: FLOW_VERSION
     editable: false
   - name: FLOW_PROJECT_ID
