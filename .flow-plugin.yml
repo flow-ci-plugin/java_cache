@@ -20,7 +20,7 @@ inputs:
       - true=TRUE
       - false=FALSE
     default: 'TRUE'
-    - name: ENABLE_MAVEN_CACHE
+  - name: ENABLE_MAVEN_CACHE
     editable: true
     options:
       - true=TRUE
