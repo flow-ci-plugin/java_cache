@@ -15,7 +15,7 @@ inputs:
       - false=FALSE
     default: 'TRUE'
   - name: ENABLE_GRADLE_CACHE
-    editable: true
+    editable: false
     options:
       - true=TRUE
       - false=FALSE
