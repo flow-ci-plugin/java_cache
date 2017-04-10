@@ -19,13 +19,13 @@ inputs:
     options:
       - true=TRUE
       - false=FALSE
-    default: 'TRUE'
+    default: 'false'
   - name: ENABLE_MAVEN_CACHE
-    editable: true
+    editable: false
     options:
       - true=TRUE
       - false=FALSE
-    default: 'false'
+    default: 'TRUE'
   - name: FLOW_VERSION
     editable: false
   - name: FLOW_PROJECT_ID
