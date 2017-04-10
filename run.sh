@@ -53,10 +53,13 @@ mvn_cache(){
   echo "$(date)" > $FLOW_MAVEN_CACHE_PATH/cache_version
   rm -rf  $FLOW_USER_MAVEN_CACHE && ln -s  $FLOW_MAVEN_CACHE_PATH $FLOW_USER_MAVEN_CACHE
 }
-
+#
 if [[ $FLOW_ENABLE_CACHE == 'TRUE' ]]; then
-  #cache_gradle
-  mvn_cache
+  if[[ $ENABLE_MAVEN_CACHE=='TRUE' ]]; then
+    mvn_cache
+  elif [[ $ENABLE_GRADLE_CACHE=='TRUE' ]]; then
+    cahe_gradle
+  fi
 else
   echo 'cache disabled'
 fi
