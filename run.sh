@@ -12,9 +12,10 @@
 # ************************************************************
 
 cache_gradle(){
-  echo 'start gradle cache'
+  echo ' === start gradle cache'
+
   FLOW_GRADLE_CACHE_PATH="$CACHE_BASE_URL/gradle/user_cache"
-  FLOW_USER_GRADLE_CACHE="$HOME/.gradle/gradle.properties"
+  FLOW_USER_GRADLE_CACHE="$HOME/.gradle"
   
   if [[ -d $FLOW_GRADLE_CACHE_PATH ]]; then
      echo "gradle cache exists"
@@ -27,7 +28,7 @@ cache_gradle(){
   rm -rf  $FLOW_USER_GRADLE_CACHE && ln -s  $FLOW_GRADLE_CACHE_PATH $FLOW_USER_GRADLE_CACHE
 
  FLOW_PROJECT_CACHE_PATH="$CACHE_BASE_URL/gradle/project_cache"
- FLOW_PROJECT_GRADLE_CACHE="$FLOW_CURRENT_PROJECT_PATH/.gradle/gradle.properties"
+ FLOW_PROJECT_GRADLE_CACHE="$FLOW_CURRENT_PROJECT_PATH/.gradle"
 
   if [[ -d $FLOW_PROJECT_CACHE_PATH ]]; then
      echo "gradle cache exists"
@@ -40,7 +41,7 @@ cache_gradle(){
 
 
 mvn_cache(){
-  echo 'start maven cache'
+  echo ' === start maven cache'
   # MAVEN
   FLOW_MAVEN_CACHE_PATH="$CACHE_BASE_URL/maven/user_cache"
   FLOW_USER_MAVEN_CACHE="$HOME/.m2"
@@ -55,7 +56,7 @@ mvn_cache(){
 }
 #
 if [[ $FLOW_ENABLE_CACHE == 'TRUE' ]]; then
-  #默认采用maven缓存，如果用户选择了gradle，则采用gradle缓存
+  
   if [[ $ENABLE_GRADLE_CACHE == 'TRUE' ]]; then
     cache_gradle
   fi
