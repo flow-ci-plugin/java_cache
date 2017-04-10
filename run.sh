@@ -55,10 +55,10 @@ mvn_cache(){
 }
 #
 if [[ $FLOW_ENABLE_CACHE == 'TRUE' ]]; then
-  if[[ $ENABLE_MAVEN_CACHE=='TRUE' ]]; then
+  if[[ $ENABLE_GRADLE_CACHE=='TRUE' ]]; then
+    cache_gradle
+  else 
     mvn_cache
-  elif [[ $ENABLE_GRADLE_CACHE=='TRUE' ]]; then
-    cahe_gradle
   fi
 else
   echo 'cache disabled'
