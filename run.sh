@@ -56,9 +56,10 @@ mvn_cache(){
 #
 if [[ $FLOW_ENABLE_CACHE == 'TRUE' ]]; then
   #默认采用maven缓存，如果用户选择了gradle，则采用gradle缓存
-  if [[ $ENABLE_GRADLE_CACHE=='TRUE' ]]; then
+  if [[ $ENABLE_GRADLE_CACHE == 'TRUE' ]]; then
     cache_gradle
-  else 
+  fi
+  if [[ $ENABLE_MAVEN_CACHE == 'TRUE' ]]; then
     mvn_cache
   fi
 else
