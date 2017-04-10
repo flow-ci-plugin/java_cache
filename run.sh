@@ -14,7 +14,7 @@
 cache_gradle(){
   echo 'start gradle cache'
   FLOW_GRADLE_CACHE_PATH="$CACHE_BASE_URL/gradle/user_cache"
-  FLOW_USER_GRADLE_CACHE="$HOME/.gradle"
+  FLOW_USER_GRADLE_CACHE="$HOME/.gradle/gradle.properties"
   
   if [[ -d $FLOW_GRADLE_CACHE_PATH ]]; then
      echo "gradle cache exists"
@@ -27,7 +27,7 @@ cache_gradle(){
   rm -rf  $FLOW_USER_GRADLE_CACHE && ln -s  $FLOW_GRADLE_CACHE_PATH $FLOW_USER_GRADLE_CACHE
 
  FLOW_PROJECT_CACHE_PATH="$CACHE_BASE_URL/gradle/project_cache"
- FLOW_PROJECT_GRADLE_CACHE="$FLOW_CURRENT_PROJECT_PATH/.gradle"
+ FLOW_PROJECT_GRADLE_CACHE="$FLOW_CURRENT_PROJECT_PATH/.gradle/gradle.properties"
 
   if [[ -d $FLOW_PROJECT_CACHE_PATH ]]; then
      echo "gradle cache exists"
