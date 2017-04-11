@@ -46,7 +46,7 @@ mvn_cache(){
   FLOW_MAVEN_CACHE_PATH="$CACHE_BASE_URL/maven/user_cache"
   FLOW_USER_MAVEN_CACHE="$HOME/.m2"
   if [[ -d $FLOW_MAVEN_CACHE_PATH ]]; then
-    echo "gradle cache exists"
+    echo "maven cache exists"
   else
     #echo "cache not exists"
     mkdir -p $FLOW_MAVEN_CACHE_PATH
