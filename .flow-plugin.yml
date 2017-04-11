@@ -15,7 +15,7 @@ inputs:
       - false=FALSE
     default: 'TRUE'
   - name: ENABLE_GRADLE_CACHE
-    desc_cn: " 开启gradle缓存"
+    desc_cn: "开启gradle缓存"
     desc_en: "Enable gradle cache"
     editable: true
     options:
@@ -24,7 +24,7 @@ inputs:
     default: 'FALSE'
   - name: ENABLE_MAVEN_CACHE
     editable: true
-    desc_cn: " 开启maven缓存"
+    desc_cn: "开启maven缓存"
     desc_en: "Enable maven cache"
     options:
       - true=TRUE
