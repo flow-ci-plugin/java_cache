@@ -10,6 +10,8 @@ tags:
 inputs:
   - name: FLOW_ENABLE_CACHE
     editable: true
+    desc_cn: "开启java缓存"
+    desc_en: "Enable java cache"
     options:
       - true=TRUE
       - false=FALSE
